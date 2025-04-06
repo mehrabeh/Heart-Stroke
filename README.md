@@ -1,6 +1,45 @@
 # Heart-Stroke
-This project aims to predict the likelihood of stroke occurrence using machine learning techniques. The researchers worked with a healthcare dataset containing various patient attributes such as age, gender, BMI, glucose levels, smoking status, heart disease history, and marriage status. The primary goal was to develop an accurate classification model that could identify patients at risk of stroke based on these factors.
-The data preprocessing phase involved several key steps. The researchers first examined the dataset structure, identified and handled missing values in the BMI column by filling them with the mean value, and performed exploratory data analysis to understand the relationships between variables. Normality tests were conducted on numerical features like age, average glucose level, and BMI using histograms, Q-Q plots, and the Shapiro-Wilk test. Categorical variables were transformed into numerical representations to make them suitable for machine learning algorithms.
-The exploratory data analysis revealed interesting patterns through various visualizations. The researchers used heatmaps to check for missing values, pairplots and correlation matrices to understand feature relationships, and countplots to explore the distribution of stroke cases across different categorical variables like gender, heart disease status, and smoking habits. A joint plot was also used to visualize the relationship between age and average glucose levels.
-Four different machine learning models were implemented and compared for stroke prediction: Logistic Regression, Support Vector Machine (SVM), K-Nearest Neighbors (KNN), and Decision Tree Classifier. Each model was evaluated using repeated stratified k-fold cross-validation with 10 splits and 5 repeats to ensure robust performance assessment. The results showed that Logistic Regression and SVM achieved similar accuracy rates of approximately 95.1%, while KNN scored 94.9% and Decision Tree performed slightly lower at 91%.
-Feature importance analysis using permutation importance with the KNN model identified the three most influential factors for stroke prediction: age, average glucose level, and BMI, in descending order of importance. This finding is particularly valuable for healthcare professionals as it highlights the key risk factors that should be monitored closely for stroke prevention. The project demonstrates how machine learning techniques can be effectively applied to healthcare data to develop predictive models that could potentially assist in early risk assessment and intervention strategies for stroke patients.
+Overview
+This project implements and compares multiple machine learning models to predict the likelihood of stroke based on patient data. Using a comprehensive healthcare dataset with various demographic and health metrics, the models achieve up to 95.1% accuracy in identifying potential stroke cases.
+
+Dataset
+The dataset (healthcare-dataset-stroke-data.csv) contains the following features:
+Gender
+Age
+Hypertension
+Heart disease history
+Marital status
+Work type
+Residence type
+Average glucose level
+BMI (Body Mass Index)
+Smoking status
+Stroke occurrence (target variable)
+
+Methodology
+Data Preprocessing
+Removed ID column (non-predictive)
+Handled missing BMI values by imputing with the mean
+Encoded categorical variables
+Performed normality testing on numerical features
+Applied feature scaling using MinMaxScaler
+
+Exploratory Data Analysis
+Statistical summary of the dataset
+Correlation analysis
+Distribution visualization of key features
+Relationship between stroke occurrence and demographic factors
+
+Models Implemented
+The project compares four different classification algorithms:
+Logistic Regression
+Support Vector Machine (SVM)
+K-Nearest Neighbors (KNN)
+Decision Tree Classifier
+Each model was evaluated using a 10-fold cross-validation repeated 5 times to ensure robust performance metrics.
+
+Results
+Logistic Regression: 95.1% accuracy
+SVM: 95.1% accuracy
+KNN: 94.9% accuracy
+Decision Tree Classifier: 91.1% accuracy
